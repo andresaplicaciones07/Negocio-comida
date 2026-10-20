@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#241812" />
+    <title>Negocio Comida</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Negocio Comida" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" />
+
+    <!-- Tailwind: genera las clases utilitarias directo en el navegador, sin build -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      html, body, #root { height: 100%; margin: 0; background: #241812; }
+      #app-root h1, #app-root h2, #app-root .display { font-family: Fraunces, serif; }
+      #app-root::-webkit-scrollbar { width: 0px; }
+      @media print {
+        #app-root .no-print { display: none !important; }
+        #app-root { background: white !important; color: black !important; max-width: 100% !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Service Worker: permite que la app abra sin internet -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js").catch(() => {});
+        });
+      }
+    </script>
+
+    <!-- Babel: convierte el JSX de app.jsx a JavaScript normal, en vivo, en el navegador -->
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <script type="text/babel" data-type="module" data-presets="react" src="./app.jsx"></script>
+  </body>
+</html>

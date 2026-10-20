@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.andresaroca.salchicosteno",
+        "sha256_cert_fingerprints": ["65:DB:C5:7B:5D:AB:BE:83:36:47:8A:07:36:9E:6C:17:6C:24:5E:56:C5:28:1C:55:29:41:F6:13:3A:15:26:0E"]
+      }
+    }]

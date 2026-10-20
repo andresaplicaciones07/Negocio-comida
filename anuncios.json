@@ -1,0 +1,4 @@
+{
+  "_ayuda": "Agrega tus anuncios en la lista. Cada uno: titulo, texto, enlace (opcional) e imagen (opcional, ruta o URL). Si la lista queda vacía se muestra 'Tu publicidad aquí'.",
+  "anuncios": []
+}
