@@ -1,11 +1,11 @@
-// Service Worker — Negocio Comida (versión tienda)
+// Service Worker — Salchi costeño (versión tienda)
 // Guarda una copia de la app (y de las librerías externas que usa) para que abra
 // sin conexión después de la primera vez que se abre con internet.
 //
-// IMPORTANTE: si subes cambios nuevos a Netlify, cambia el número de
-// CACHE_NAME (ej. "negocio-comida-v24-plano") para que los celulares reciban
+// IMPORTANTE: si subes cambios nuevos a GitHub, cambia el número de
+// CACHE_NAME (ej. "negocio-comida-v28") para que los celulares reciban
 // la versión nueva en vez de la guardada en caché.
-const CACHE_NAME = "negocio-comida-v27";
+const CACHE_NAME = "negocio-comida-v28";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -20,11 +20,18 @@ const APP_SHELL = [
   "./images/patacon.png",
   "./images/empanada.png",
 ];
-// Librerías externas que la app necesita para abrir (Tailwind, Babel y tipografías).
+// Librerías externas que la app necesita para abrir sin internet.
+// ⚠️ IMPORTANTE: incluye React, ReactDOM e íconos desde esm.sh,
+// Tailwind, Babel y las fuentes. Sin esto la app no abre la primera vez sin conexión.
 const EXTERNOS = [
   "https://cdn.tailwindcss.com",
   "https://unpkg.com/@babel/standalone@7/babel.min.js",
   "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap",
+  // React y ReactDOM desde esm.sh (mismas URLs exactas que usa app.jsx)
+  "https://esm.sh/react@18.2.0",
+  "https://esm.sh/react-dom@18.2.0/client",
+  // Íconos de lucide-react (con el pin de versión y deps exactos)
+  "https://esm.sh/lucide-react@0.383.0?deps=react@18.2.0",
 ];
 // Solo se guardan respuestas "opacas" (sin permiso CORS) de estos sitios de confianza.
 const HOSTS_CACHEABLES = ["cdn.tailwindcss.com", "unpkg.com", "esm.sh", "fonts.googleapis.com", "fonts.gstatic.com"];
