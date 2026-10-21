@@ -1,7 +1,7 @@
 {
-  "name": "Negocio Comida",
-  "short_name": "Negocio Comida",
-  "description": "Catálogo, ventas y caja de Negocio Comida",
+  "name": "Salchi costeño",
+  "short_name": "Salchi costeño",
+  "description": "Catálogo, ventas y caja para tu negocio de comidas",
   "id": "./index.html",
   "start_url": "./index.html",
   "scope": "./",
@@ -30,9 +30,5 @@
   ],
   "lang": "es",
   "orientation": "portrait",
-  "categories": [
-    "food",
-    "business",
-    "finance"
-  ]
+  "categories": ["food", "business", "finance"]
 }
