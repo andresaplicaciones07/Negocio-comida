@@ -3,7 +3,7 @@
 //
 // REGLA DE ORO: cada vez que cambies app.jsx u otro archivo, sube el número de CACHE_NAME
 // (ej. "negocio-comida-v29") y sube sw.js a GitHub junto con los demás cambios.
-const CACHE_NAME = "negocio-comida-v29";
+const CACHE_NAME = "negocio-comida-v30";
 
 const APP_SHELL = [
   "./",
